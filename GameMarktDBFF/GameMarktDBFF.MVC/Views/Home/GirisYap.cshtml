@@ -1,0 +1,188 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model GameMarktDBF2.DAL.Models.Musteri
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/kayitol.css">
+<script src="kayitekran.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/admin-login.css">
+<script src="/js/admin.login.js"></script>
+<div>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/img/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</div>
+<script>
+    function girisKontrol(email, sifre) {
+        var email = document.getElementById("email").value;
+        var sifre = document.getElementById("password").value;
+
+        if (email == "denizhoca") {
+            if (sifre == "1234") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email = !"denizhoca" || sifre != "1234") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+
+        else if (email == "admin") {
+            if (sifre == "admin") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email !="admin" || sifre != "admin") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+
+        else if (email == "tdincerkaan@gmail.com") {
+            if (sifre == "sifredeneme4444") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email!="tdincerkaan@gmail.com" || sifre != "sifredeneme4444") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+
+        else if (email == "egebayrak@outlook.com") {
+            if (sifre == "bubirsifredir") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email!="egebayrak@outlook.com" || sifre != "bubirsifredir") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+        else if (email == "okanozturkenoglu@bakircay.edu.tr") {
+            if (sifre == "okanhocasifre") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email!="okanozturkenoglu@bakircay.edu.tr" || sifre != "okanhocasifre") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+       else if (email == "cevhernursoylemez@bakircay.edu.tr") {
+            if (sifre == "cevherhocasifre") {
+
+                alert("Giriş Yapıldı");
+                window.location.replace("https://localhost:44380/Home/GirisAnasayfa");
+                return true;
+            }
+
+        }
+        else if (email = !"cevhernursoylemez@bakircay.edu.tr" || sifre != "cevherhocasifre") {
+
+            alert("Email ya da şifre yanlış");
+            return false;
+        }
+
+       
+    }
+</script>
+<div class="navbar" style="text-align: center;font-weight:bold;">
+    <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Oyunlar">Oyunlar</a>
+    <div class="dropdown">
+        <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction3()">
+            E-Pin <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown3">
+
+            <a asp-area="" asp-controller="Home" asp-action="VpSatinAl">Valorant Points</a>
+            <a asp-area="" asp-controller="Home" asp-action="UcSatinAl">PUBG Mobile UC</a>
+            <a asp-area="" asp-controller="Home" asp-action="RpSatinAl">League Of Legends RP</a>
+            <a asp-area="" asp-controller="Home" asp-action="SteamSatinAl">Steam Cüzdan Kodu</a>
+
+        </div>
+    </div>
+    <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Destek">Destek</a>
+    <a style="text-align: center; color: white; border: 1px solid gold; border-radius: 20px; margin: 10px; width: 3cm " asp-area="" asp-controller="Home" asp-action="GirisYap">Giriş Yap!</a>
+    <a style="text-align: center; color: white; border: 1px solid gold; border-radius: 20px; margin: 10px; width: 3cm" asp-area="" asp-controller="Home" asp-action="KayıtOl">Kayıt Ol!</a>
+
+</div>
+
+<div style="border: 1px solid #333;border-radius: 20px;background-color: rgba(255,255,255,.5);width: 44%;text-align: center;margin: auto;margin-top:30px;height: 400px;">
+
+    <div class="divCenter">
+        <form action="#" method="post">
+            <div class="loginbox">
+                <h1>Giriş Ekranı</h1>
+
+                <input id="email" class="un-pw" name="username" type="text" placeholder="Email Adresi:">
+
+
+                <input id="password" class="un-pw" name="password" type="password" placeholder="Şifre:">
+                <input class="buttongiris" style="color: white; margin-top : 15px" onclick="girisKontrol(username, password)" type="button" value="Giriş Yap!">
+            </div>
+        </form>
+    </div>
+
+</div>
+<style>
+    .buttongiris {
+        background-color: #333;
+        border-radius: 20px;
+        border: 1px solid gold;
+        color: white;
+        text-align: center;
+        align-items: center;
+        font-size: 16px;
+        margin: auto;
+        opacity: 1;
+        transition: 0.3s;
+        text-decoration: none;
+        font-weight: bold;
+        width: 150px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .button:hover {
+        opacity: 1
+    }
+</style>
+
+
+</div>

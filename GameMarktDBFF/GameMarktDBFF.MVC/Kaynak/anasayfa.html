@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="/wwwroot/css/style.css">-->
+<script src="kayitekran.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div style="background-color: #333; color: white;text-align: center;height: 230px;">
+<img style="text-align:center;display: block; margin: auto;" src="img/logom.png">
+<a href="girisyap.html"><button class="button">Giriş Yap!</button></a>
+<a href="kayitol.html"><button class="button2">Kayıt Ol!  </button></a>
+</div>
+</head>
+
+<body>
+
+<div class="navbar" style="text-align: center;font-weight:bold;">
+  <a style="text-align: center" href="anasayfa.html">Anasayfa</a>
+  <div class="dropdown">
+  <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction()">Oyun <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#">Oyun1</a>
+    <a href="#">Oyun2</a>
+    <a href="#">Oyun3</a>
+    <a href="#">Oyun4</a>
+  </div>
+  </div> 
+  <div class="dropdown">
+    <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction1()">Item <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown1">
+      <a href="#">Item1</a>
+      <a href="#">Item2</a>
+      <a href="#">Item3</a>
+      <a href="#">Item4</a>
+    </div>
+    </div> 
+    <div class="dropdown">
+      <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction2()">Skin <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown2">
+        <a href="#">Skin1</a>
+        <a href="#">Skin2</a>
+        <a href="#">Skin3</a>
+        <a href="#">Skin4</a>
+      </div>
+      </div> 
+      <div class="dropdown">
+        <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction3()">E-Pin <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown3">
+          <a href="vpsatinal.html">Valorant Points</a>
+          <a href="pubgmobucsatinal.html">PUBG MOBILE UC</a>
+          <a href="rpsatinal.html">League of Legends RP</a>
+          <a href="steamkodsatinal.html">Steam Cüzdan Kodu</a>
+        </div>
+        </div> 
+</div>
+
+  </head>
+
+  <body>
+
+  <div style="margin-top: 40px; border-radius: 20px;" class="slideshow-container">
+  <div  class="mySlides fade">
+    <div class="numbertext"></div>
+    <a href="pubgmobucsatinal.html">
+      <img border="0" alt="foto5" src="img/pubg.png" width="100%" height="auto"></a>
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <a href="vpsatinal.html">
+      <img border="0" alt="foto6" src="img/valo.png" width="100%" height="auto"></a>
+    <div class="text">Yılbaşına özel indirimlerle Valorant Point fırsatlarını kaçırma!</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <a href="steamkodsatinal.html">
+      <img border="0" alt="foto6" src="img/steam.png" width="100%" height="auto"></a>
+    <div class="text">Yılbaşına özel indirimlerle Steam Cüzdan Kodu fırsatlarını kaçırma!</div>
+  </div>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3500); // Change image every 2 seconds
+  }
+  </script>
+
+<div style="text-align: center;padding: 20px;  position: relative;justify-content: center;flex-direction: row;align-content: center;align-items: center;display:flex;">
+  <a href="vpsatinal.html">
+    <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px;" alt="foto1" src="img/valorantbanner.png" width="auto" height="auto">
+    <p style="color: white;font-weight: bold">Valorant Points</p></a>
+    <a href="rpsatinal.html">
+      <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto2" src="img/lolbanner.png" width="auto" height="auto">
+      <p style="color: white;font-weight: bold">LoL Riot Points</p></a>
+    <a href="pubgmobucsatinal.html">
+        <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto3" src="img/pubgbanner.png" width="auto" height="auto">
+        <p style="color: white;font-weight: bold">PUBG MOBILE UC</p></a>
+     <a href="steamkodsatinal.html">
+          <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto4" src="img/steambanner.png" width="auto" height="auto">
+          <p style="color: white;font-weight: bold">Steam Cüzdan Kodu</p></a>    
+</div>
+
+</body>
+</html>

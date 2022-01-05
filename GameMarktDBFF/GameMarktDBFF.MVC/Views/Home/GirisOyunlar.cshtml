@@ -1,0 +1,251 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<GameMarktDBF2.DAL.Models.Urun>
+@{
+    ViewData["Title"] = "Oyunlar";
+}
+<head>
+    <link rel="stylesheet" href="/css/stil.css">
+    <script src="~/js/kayitekran.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+
+<div>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/img/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</div>
+
+
+
+<div class="container mydiv">
+    <div class="row">
+                <!--<div class="col-md-4">-->
+                    <!-- bbb_deals -->
+                    <!--<div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/cybrpnk_500x600.jpg" alt=""></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_category"><a>CD PROJEKT RED</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>249,00 TL</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">Cyberpunk 2077</div>
+                                        <div class="bbb_deals_item_price ml-auto">124,50 TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>-->
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+
+            {
+                if (item.KategoriId == 2)
+                {
+                <div class="col-md-4">
+
+                    <!-- bbb_deals -->
+                    <div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/fotoGenel.png" alt=""></div>
+                                <div class="bbb_deals_content">
+                                   
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">@item.UrunAd</div>
+                                        <div class="bbb_deals_item_price ml-auto">@item.Fiyat TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+                                            <div class="available_title">Stok: <span>@item.Miktar</span></div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>}
+            }
+        }
+                <!--<div class="col-md-4">-->
+                    <!-- bbb_deals -->
+                    <!--<div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/fifa22_500x600.png" alt=""></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_category"><a>Electronic Arts</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>419,99 TL</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">FIFA 22</div>
+                                        <div class="bbb_deals_item_price ml-auto">167,99 TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">-->
+                    <!-- bbb_deals -->
+                    <!--<div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/newworld_500x600.jpg" alt=""></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_category"><a>Amazon Games</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>177,50 TL</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">New World</div>
+                                        <div class="bbb_deals_item_price ml-auto">133,12 TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">-->
+                    <!-- bbb_deals -->
+                    <!--<div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/resim_2022-01-04_223239_500x600.png" alt=""></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_category"><a>Endnight Games Ltd</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>32,00 TL</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">The Forest</div>
+                                        <div class="bbb_deals_item_price ml-auto">12,80 TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">-->
+                    <!-- bbb_deals -->
+                    <!--<div class="bbb_deals">
+
+                        <div class="bbb_deals_slider_container">
+                            <div class=" bbb_deals_item">
+                                <div class="bbb_deals_image"><img src="~/img/resim_2022-01-04_223325_500x600.png" alt=""></div>
+                                <div class="bbb_deals_content">
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_category"><a>Rockstar Games</a></div>
+                                        <div class="bbb_deals_item_price_a ml-auto"><strike>299,00 TL</strike></div>
+                                    </div>
+                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                        <div class="bbb_deals_item_name">RDR 2</div>
+                                        <div class="bbb_deals_item_price ml-auto">149,50 TL</div>
+                                    </div>
+                                    <div class="available">
+                                        <div class="available_line d-flex flex-row justify-content-start">
+
+                                            <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                        </div>
+                                        <div class="available_bar"><span style="width:17%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="SatinAlma"><button class="buttonSatinal button1">Satın Al!</button></a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <style>
+                    .buttonSatinal {
+                        background-color: #4CAF50; /* Green */
+                        border: none;
+                        color: white;
+                        padding: 8px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        transition-duration: 0.4s;
+                        cursor: pointer;
+                        position: relative;
+                        top: 20px;
+                        right: -2.25cm;
+                    }
+
+                    .button1 {
+                        background-color: #4CAF50;
+                        color: white;
+                        border: 2px solid #4CAF50;
+                        border-radius: 20px;
+                        text-align: center;
+                        margin: auto;
+                    }
+
+                        .button1:hover {
+                            background-color: transparent;
+                            color: #4CAF50;
+                        }
+                </style>
+            </div>
+</div>

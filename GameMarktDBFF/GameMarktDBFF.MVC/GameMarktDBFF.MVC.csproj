@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\kayitol.css" />
+    <Content Remove="wwwroot\css\style.css" />
+    <Content Remove="wwwroot\img\logom.png" />
+    <Content Remove="wwwroot\js\kayitekran.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\kayitol.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\img\100tl.png" />
+    <None Include="wwwroot\img\10tl.png" />
+    <None Include="wwwroot\img\1250vp.png" />
+    <None Include="wwwroot\img\12800rp.png" />
+    <None Include="wwwroot\img\1780rp.png" />
+    <None Include="wwwroot\img\1800uc.png" />
+    <None Include="wwwroot\img\200tl.png" />
+    <None Include="wwwroot\img\20tl.png" />
+    <None Include="wwwroot\img\2500vp.png" />
+    <None Include="wwwroot\img\300vp.png" />
+    <None Include="wwwroot\img\325uc.png" />
+    <None Include="wwwroot\img\3620rp.png" />
+    <None Include="wwwroot\img\3850uc.png" />
+    <None Include="wwwroot\img\400rp.png" />
+    <None Include="wwwroot\img\4400vp.png" />
+    <None Include="wwwroot\img\50tl.png" />
+    <None Include="wwwroot\img\600vp.png" />
+    <None Include="wwwroot\img\60uc.png" />
+    <None Include="wwwroot\img\6300vp.png" />
+    <None Include="wwwroot\img\6450rp.png" />
+    <None Include="wwwroot\img\660uc.png" />
+    <None Include="wwwroot\img\8100uc.png" />
+    <None Include="wwwroot\img\8400vp.png" />
+    <None Include="wwwroot\img\840rp.png" />
+    <None Include="wwwroot\img\9620rp.png" />
+    <None Include="wwwroot\img\background.jpg" />
+    <None Include="wwwroot\img\cccard.png" />
+    <None Include="wwwroot\img\logom.png" />
+    <None Include="wwwroot\img\logout.png" />
+    <None Include="wwwroot\img\lolbanner.png" />
+    <None Include="wwwroot\img\pubg.png" />
+    <None Include="wwwroot\img\pubgbanner.png" />
+    <None Include="wwwroot\img\steam.png" />
+    <None Include="wwwroot\img\steambanner.png" />
+    <None Include="wwwroot\img\user.png" />
+    <None Include="wwwroot\img\valo.png" />
+    <None Include="wwwroot\img\valorantbanner.png" />
+    <None Include="wwwroot\js\kayitekran.js" />
+    <None Include="wwwroot\css\stil.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameMarktDBF2.DAL\GameMarktDBF2.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Kaynak\img\" />
+  </ItemGroup>
+
+</Project>

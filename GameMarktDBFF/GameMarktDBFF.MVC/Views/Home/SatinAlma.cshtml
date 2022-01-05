@@ -1,0 +1,151 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<GameMarktDBF2.DAL.Models.Urun>
+@{
+    ViewData["Title"] = "Oyunlar";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/kayitol.css">
+    <script src="kayitekran.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar" style="text-align: center;font-weight:bold;">
+        <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Oyunlar">Oyunlar</a>
+        <div class="dropdown">
+            <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction3()">
+                E-Pin <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown3">
+
+                <a asp-area="" asp-controller="Home" asp-action="VpSatinAl">Valorant Points</a>
+                <a asp-area="" asp-controller="Home" asp-action="UcSatinAl">PUBG Mobile UC</a>
+                <a asp-area="" asp-controller="Home" asp-action="RpSatinAl">League Of Legends RP</a>
+                <a asp-area="" asp-controller="Home" asp-action="SteamSatinAl">Steam Cüzdan Kodu</a>
+
+            </div>
+        </div>
+        <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Destek">Destek</a>
+
+
+    </div>
+
+
+
+    <a href="profil.html">
+        <img class="buttongirisbasarili" border="0" alt="foto5" src="/img/user.png">
+    </a>
+
+    <a href="anasayfa.html">
+        <img class="buttongirisbasarili" border="0" alt="foto7" src="/img/logout.png">
+    </a>
+
+
+
+    <div>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url('/img/background.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+    </div>
+
+
+
+
+    <style>
+        .buttongirisbasarili {
+            background-color: transparent;
+            border-radius: 20px;
+            border: 1px solid gold;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            right: -1700px;
+            bottom: 175px;
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+        .button:hover {
+            opacity: 1
+        }
+    </style>
+
+    </div>
+</head>
+<body>
+
+    <div style="border: 1px solid #333;border-radius: 20px;background-color: rgba(255,255,255,.5);width: 100%;text-align: center;margin: auto;margin-top:30px;height: 450px;">
+        <h1 style="text-align: center;font-size: 30px;padding: 30px;">Satın Alma Ekranı</h1>
+
+
+
+        <div class="girisform">
+            <p class="myStyle1">Adınız:</p>
+            <input type="text" id="name" />
+            <p class="myStyle1">Soyadınız:</p>
+            <input type="text" id="surname" />
+            <p class="myStyle1">Kredi Kart No:</p>
+            <input type="text" id="ccno" />
+            <p class="myStyle1">Geçerlilik Tarihi(AA/YY):</p>
+            <input type="text" id="ccdate" />
+            <p class="myStyle1">CVV2:</p>
+            <input type="text" id="cvv2no" />
+            
+            <a><button class="buttongiris" onclick="satinAl()">Satın Al!</button></a>
+            @{var item = Model;
+                
+            }
+        </div>
+
+
+        <style>
+            .buttongiris {
+                background-color: #333;
+                border-radius: 20px;
+                border: 1px solid gold;
+                color: white;
+                text-align: center;
+                align-items: center;
+                font-size: 16px;
+                margin: auto;
+                opacity: 1;
+                transition: 0.3s;
+                text-decoration: none;
+                font-weight: bold;
+                width: 150px;
+                height: 50px;
+                margin-top: 30px;
+            }
+
+            .button:hover {
+                opacity: 1
+            }
+        </style>
+
+
+    </div>
+    <img style="position: relative;right: -1200px;top: -550px" src="/img/cccard.png">
+
+
+</body>
+</html>

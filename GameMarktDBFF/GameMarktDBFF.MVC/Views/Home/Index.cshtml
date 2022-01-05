@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "GameMarkt";
+}
+
+<div>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/img/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+      
+        .button {
+            background-color: transparent;
+            border-radius: 20px;
+            border: 1px solid gold;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            right: -650px;
+            bottom: 175px;
+            position: relative;
+            width: 150px;
+        }
+
+        .button:hover {
+            opacity: 1
+        }
+    
+    </style>
+</div>
+
+<div class="navbar" style="text-align: center;font-weight:bold;">
+    <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Oyunlar">Oyunlar</a>
+    <div class="dropdown">
+        <button style="text-align: center;font-weight:bold;" class="dropbtn" onclick="myFunction3()">
+            E-Pin <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown3">
+
+            <a asp-area="" asp-controller="Home" asp-action="VpSatinAl">Valorant Points</a>
+            <a asp-area="" asp-controller="Home" asp-action="UcSatinAl">PUBG Mobile UC</a>
+            <a asp-area="" asp-controller="Home" asp-action="RpSatinAl">League Of Legends RP</a>
+            <a asp-area="" asp-controller="Home" asp-action="SteamSatinAl">Steam Cüzdan Kodu</a>
+
+        </div>
+    </div>
+    <a style="text-align: center" asp-area="" asp-controller="Home" asp-action="Destek">Destek</a>
+    <a style="text-align: center; color: white; border: 1px solid gold; border-radius: 20px; margin: 10px; width: 3cm " asp-area="" asp-controller="Home" asp-action="GirisYap">Giriş Yap!</a>
+    <a style="text-align: center; color: white; border: 1px solid gold; border-radius: 20px; margin: 10px; width: 3cm"  asp-area="" asp-controller="Home" asp-action="KayıtOl">Kayıt Ol!</a>
+
+
+</div>
+<div style="margin-top: 40px; border-radius: 20px;" class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a asp-area="" asp-controller="Home" asp-action="UcSatinAl">
+            <img border="0" alt="foto5" src="img/pubg.png" width="100%" height="auto">
+        </a>
+        <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a asp-area="" asp-controller="Home" asp-action="VpSatinAl">
+            <img border="0" alt="foto6" src="img/valo.png" width="100%" height="auto">
+        </a>
+        <div class="text">Yılbaşına özel indirimlerle Valorant Point fırsatlarını kaçırma!</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a asp-area="" asp-controller="Home" asp-action="SteamSatinAl">
+            <img border="0" alt="foto6" src="img/steam.png" width="100%" height="auto">
+        </a>
+        <div class="text">Yılbaşına özel indirimlerle Steam Cüzdan Kodu fırsatlarını kaçırma!</div>
+    </div>
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3500); // Change image every 2 seconds
+    }
+</script>
+
+<div style="text-align: center;padding: 20px;  position: relative;justify-content: center;flex-direction: row;align-content: center;align-items: center;display:flex;">
+    <a asp-area="" asp-controller="Home" asp-action="VpSatinAl">
+        <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px;" alt="foto1"
+             src="img/valorantbanner.png" width="auto" height="auto">
+        <p style="color: white;font-weight: bold">Valorant Points</p>
+    </a>
+    <a asp-area="" asp-controller="Home" asp-action="RpSatinAl">
+        <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto2"
+             src="img/lolbanner.png" width="auto" height="auto">
+        <p style="color: white;font-weight: bold">LoL Riot Points</p>
+    </a>
+    <a asp-area="" asp-controller="Home" asp-action="UcSatinAl">
+        <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto3"
+             src="img/pubgbanner.png" width="auto" height="auto">
+        <p style="color: white;font-weight: bold">PUBG MOBILE UC</p>
+    </a>
+    <a asp-area="" asp-controller="Home" asp-action="SteamSatinAl">
+        <img border="0" style="text-align:center;display: block; margin: auto;margin: 10px" alt="foto4"
+             src="img/steambanner.png" width="auto" height="auto">
+        <p style="color: white;font-weight: bold">Steam Cüzdan Kodu</p>
+    </a>
+</div>
+
+
+
